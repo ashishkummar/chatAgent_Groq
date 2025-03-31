@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #ffd086, #210e0e);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +91,7 @@ input, textarea {
 }
 
 button {
-    background: #667eea;
+    background: #7d5e40;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -103,7 +103,7 @@ button {
 }
 
 button:hover {
-    background: #5563c1;
+    background: #5b4127;
 }
 
 button:disabled {

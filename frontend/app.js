@@ -38,7 +38,7 @@ async function askQuestion() {
     smoothScroll(responseDiv);
 
     try {
-        const res = await fetch("http://chatagentgroq-production.up.railway.app/ask", {
+        const res = await fetch("https://chatagentgroq-production.up.railway.app/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question })
