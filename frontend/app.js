@@ -4,12 +4,12 @@ import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstat
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCTthotYUGbiIQxiH6CuP9l7MZVJxJUY6o",
-    authDomain: "chat-agent-openai.firebaseapp.com",
-    projectId: "chat-agent-openai",
-    storageBucket: "chat-agent-openai.firebasestorage.app",
-    messagingSenderId: "245533128903",
-    appId: "1:245533128903:web:414320f666e8efaf6526e2"
+    apiKey: "AIzaSyCQVSjM-4QJ_93uZMhxazohRSx2C4t9IRc",
+  authDomain: "chat-agent-grok.firebaseapp.com",
+  projectId: "chat-agent-grok",
+  storageBucket: "chat-agent-grok.firebasestorage.app",
+  messagingSenderId: "480354610511",
+  appId: "1:480354610511:web:86db47d3ccffe2c9f7293a"
 };
  
 // Initialize Firebase
