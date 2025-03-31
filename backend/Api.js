@@ -14,18 +14,26 @@ app.use(express.json());
 const allowedOrigins = [
   "http://127.0.0.1:5500", // Local frontend
   "https://creative.exponential.com",
+  "https://chatagentgroq-production.up.railway.app", // Ensure the deployed domain is allowed
 ];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin) return callback(null, true); // Allow requests without an origin
-      if (allowedOrigins.includes(origin)) return callback(null, true);
-      return callback(new Error("Not allowed by CORS"));
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
     },
+    methods: ["GET", "POST", "OPTIONS"], // ✅ Ensure OPTIONS is allowed
+    allowedHeaders: ["Content-Type", "Authorization"], // ✅ Allow necessary headers
     credentials: true,
   })
 );
+
+// ✅ Handle preflight requests explicitly
+app.options("*", cors());
 
 // ✅ Initialize OpenAI (for embeddings)
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -121,4 +129,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`); 
 });
-//
