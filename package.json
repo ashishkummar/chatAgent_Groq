@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/api.js",
+    "start": "node backend/grokapi.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
